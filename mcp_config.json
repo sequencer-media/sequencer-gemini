@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "sequencer": {
+      "serverUrl": "https://mcp.sequencer.media/"
+    }
+  }
+}

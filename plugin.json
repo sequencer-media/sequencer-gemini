@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "sequencer",
+  "description": "Create AI images, video, and audio, quote generation costs, and edit Sequencer projects."
+}

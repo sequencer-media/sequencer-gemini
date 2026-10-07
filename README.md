@@ -1,33 +1,32 @@
-# Sequencer for Gemini CLI
+# Sequencer for Google agents
 
-Create product ads, animate images, generate images, video and voiceovers, and edit Sequencer projects from your assistant.
+Generate AI media, quote costs before creating, and edit Sequencer projects using the hosted MCP connection and Sequencer skill.
 
-Connect your Sequencer account through OAuth. Generation uses your existing account allowance or balance, with a USD quote before spending.
+## Antigravity CLI
 
-Setup and starter prompts: https://sequencer.media/plugin?source=gemini-cli
+Clone this repository, then install the local package:
 
-## Install
+```sh
+git clone https://github.com/sequencer-media/sequencer-gemini.git
+agy plugin install ./sequencer-gemini
+```
 
-Install the extension:
+Open `/mcp` in Antigravity, connect Sequencer, and approve access to your Sequencer account. Ask the agent to load a Sequencer skill or create a project.
+
+This package includes the native `plugin.json`, `mcp_config.json`, and `skills/` format supported by Antigravity. It also retains the Gemini CLI extension format for eligible Gemini CLI accounts.
+
+## Gemini CLI
 
 ```sh
 gemini extensions install https://github.com/sequencer-media/sequencer-gemini
 ```
 
-Run `/mcp` in Gemini CLI, authenticate Sequencer, and confirm tools are connected. For a local checkout, use `gemini extensions install /absolute/path/to/this/folder`.
+Open `/mcp`, authenticate Sequencer, and use the tools in a conversation.
 
-## Try it
+## Usage
 
-- “Animate my image into a 5-second video. Show the model, settings, and USD quote first.”
-- “Create a three-shot product ad from this brief. Quote the complete plan before generating.”
-- “Open my Sequencer project and help me improve its shots and voiceover.”
+Before paid generation, ask for a quote and approve your budget. Importing an existing image and making a standard MP4 export can test the connection without AI generation.
 
-Approve the quoted plan and budget. Your assistant tracks the media job and returns a playable result. Open the project in Sequencer to continue editing.
+[Connect and view pricing](https://sequencer.media/plugin?source=gemini-cli).
 
-Configuration: `gemini-extension.json`. Support: support@sequencer.media. [Privacy](https://sequencer.media/privacy-policy). [Terms](https://sequencer.media/terms-of-service).
-
-## Connection and license
-
-This package connects to `https://mcp.sequencer.media/` using Sequencer OAuth. Your assistant works with the account and projects you authorize. It asks for approval of the quoted generation plan and budget before spending.
-
-The connector package is distributed under the [MIT license](LICENSE). The Sequencer service follows its linked terms above.
+Support: support@sequencer.media. [Privacy](https://sequencer.media/privacy-policy). [Terms](https://sequencer.media/terms-of-service). Package license: [MIT](LICENSE).
